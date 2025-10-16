@@ -1,0 +1,50 @@
+﻿<!-- MainWindow.xaml -->
+<Window x:Class="WarehouseInventoryTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseInventoryTracker"
+        mc:Ignorable="d"
+        Title="Warehouse Inventory Tracker" Height="600" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Warehouse Selection and Search -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Warehouse:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="WarehouseComboBox" Width="200" Margin="5,0" SelectionChanged="WarehouseComboBox_SelectionChanged"/>
+            <Button x:Name="AddWarehouseButton" Content="Add Warehouse" Margin="5,0" Click="AddWarehouseButton_Click"/>
+
+            <!-- New Search Controls -->
+            <Label Content="Search:" VerticalAlignment="Center" Margin="20,0,5,0"/>
+            <TextBox x:Name="SearchTextBox" Width="200" VerticalAlignment="Center" TextChanged="SearchTextBox_TextChanged"/>
+        </StackPanel>
+
+        <!-- Product Management -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button x:Name="AddProductButton" Content="Add Product" Margin="5,0" Click="AddProductButton_Click"/>
+            <Button x:Name="ReceiveShipmentButton" Content="Receive Shipment" Margin="5,0" Click="ReceiveShipmentButton_Click"/>
+            <Button x:Name="FulfillOrderButton" Content="Fulfill Order" Margin="5,0" Click="FulfillOrderButton_Click"/>
+        </StackPanel>
+
+        <!-- Product List -->
+        <DataGrid x:Name="ProductDataGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="100"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="100"/>
+                <DataGridTextColumn Header="Reorder Threshold" Binding="{Binding ReorderThreshold}" Width="150"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Alert Messages -->
+        <TextBox x:Name="AlertTextBox" Grid.Row="3" Height="80" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="WarehouseInventoryTracker.AddWarehouseDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseInventoryTracker"
+        mc:Ignorable="d"
+        Title="Add Warehouse" Height="200" Width="400" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Warehouse ID:"/>
+        <TextBox x:Name="WarehouseIdTextBox" Grid.Row="1" Margin="0,0,0,10"/>
+
+        <Label Grid.Row="2" Content="Warehouse Name:"/>
+        <TextBox x:Name="WarehouseNameTextBox" Grid.Row="3" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="OkButton" Content="OK" Width="80" Margin="0,0,10,0" IsDefault="True" Click="OkButton_Click"/>
+            <Button x:Name="CancelButton" Content="Cancel" Width="80" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
