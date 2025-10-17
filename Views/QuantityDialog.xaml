@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseInventoryTracker"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="150" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+        Title="{Binding Title}" Height="160" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
