@@ -91,6 +91,16 @@ namespace WarehouseInventoryTracker
             });
         }
 
+        public async Task RemoveProductAsync(string warehouseId, string productId)
+        {
+            await Task.Run(() =>
+            {
+                var warehouse = GetWarehouse(warehouseId);
+                warehouse.RemoveProduct(productId);
+                SaveData(); // Persist the change
+            });
+        }
+
         private void LoadData()
         {
             if (!File.Exists(_dataFilePath))

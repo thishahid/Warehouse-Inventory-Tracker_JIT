@@ -72,6 +72,19 @@ namespace WarehouseInventoryTracker
             }
         }
 
+        public void RemoveProduct(string productId)
+        {
+            if (productId == null)
+                throw new ArgumentNullException(nameof(productId));
+
+            // TryRemove returns true if the element was successfully found and removed.
+            if (!_products.TryRemove(productId, out Product removedProduct))
+            {
+                // If it returns false, the product ID was not found.
+                throw new KeyNotFoundException($"Product with ID {productId} not found.");
+            }
+        }
+
         public void RegisterObserver(IStockObserver observer)
         {
             if (observer == null)

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseInventoryTracker"
         mc:Ignorable="d"
-        Title="Add Warehouse" Height="200" Width="400" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+        Title="Add Warehouse" Height="250" Width="400" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -22,8 +22,8 @@
         <TextBox x:Name="WarehouseNameTextBox" Grid.Row="3" Margin="0,0,0,10"/>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="OkButton" Content="OK" Width="80" Margin="0,0,10,0" IsDefault="True" Click="OkButton_Click"/>
-            <Button x:Name="CancelButton" Content="Cancel" Width="80" IsCancel="True"/>
+            <Button x:Name="OkButton" Content="OK" Width="80" Margin="0,0,10,0" Foreground="White" IsDefault="True" Click="OkButton_Click"/>
+            <Button x:Name="CancelButton" Content="Cancel" Width="80" Foreground="White" IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -208,6 +209,44 @@ namespace WarehouseInventoryTracker
             }
         }
 
+        private async void DeleteProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_currentWarehouse == null)
+            {
+                MessageBox.Show("Please select a warehouse first.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (ProductDataGrid.SelectedItem is ProductViewModel selectedProduct)
+            {
+                // Show a confirmation dialog
+                var result = MessageBox.Show(
+                    $"Are you sure you want to delete the product '{selectedProduct.Name}' (ID: {selectedProduct.Id})?",
+                    "Confirm Deletion",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        await _warehouseManager.RemoveProductAsync(_currentWarehouse.Id, selectedProduct.Id);
+                        RefreshProductList();
+                        ApplyFilter(SearchTextBox.Text);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error deleting product: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            else
+            {
+                // This case should not happen due to the IsEnabled binding, but it's good practice.
+                MessageBox.Show("Please select a product to delete.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
         private void OnStockAlert(object sender, StockAlertEventArgs e)
         {
             Dispatcher.Invoke(() =>
@@ -281,6 +320,25 @@ namespace WarehouseInventoryTracker
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}
+
+
+namespace WarehouseInventoryTracker
+{
+    public class NullToBooleanConverter : IValueConverter
+    {
+        // Converts the selected item (value) to a boolean (true if not null)
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return value != null;
+        }
+
+        // Not needed for this scenario
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

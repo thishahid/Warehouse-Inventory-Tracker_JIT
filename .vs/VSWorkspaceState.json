@@ -4,10 +4,9 @@
     "\\bin",
     "\\EventArgs",
     "\\Models",
-    "\\Properties",
+    "\\Services",
     "\\ViewModels",
     "\\Views"
   ],
-  "SelectedNode": "\\EventArgs",
   "PreviewInSolutionExplorer": false
 }
