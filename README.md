@@ -10,7 +10,7 @@ A modern, real-time, event-driven warehouse management system built with C# and 
 
 ## 🎨 Screenshot
 
-![A beautiful screenshot of the application's main window, showing the Material Design UI with product cards and action buttons.](images/Screenshot.png)
+![A beautiful screenshot of the application's main window, showing the Material Design UI with product cards and action buttons.](image/Screenshot.png)
 
 ## ✨ Features
 
