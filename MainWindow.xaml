@@ -5,46 +5,160 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseInventoryTracker"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Warehouse Inventory Tracker" Height="600" Width="900">
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
 
-        <!-- Warehouse Selection and Search -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
-            <Label Content="Warehouse:" VerticalAlignment="Center"/>
-            <ComboBox x:Name="WarehouseComboBox" Width="200" Margin="5,0" SelectionChanged="WarehouseComboBox_SelectionChanged"/>
-            <Button x:Name="AddWarehouseButton" Content="Add Warehouse" Margin="5,0" Click="AddWarehouseButton_Click"/>
+	
+	TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+	TextElement.FontWeight="Regular"
+	TextElement.FontSize="13"
+	TextOptions.TextFormattingMode="Ideal"
+	TextOptions.TextRenderingMode="Auto"
+	Background="{DynamicResource MaterialDesignPaper}"
+	FontFamily="{DynamicResource MaterialDesignFont}"
 
-            <!-- New Search Controls -->
-            <Label Content="Search:" VerticalAlignment="Center" Margin="20,0,5,0"/>
-            <TextBox x:Name="SearchTextBox" Width="200" VerticalAlignment="Center" TextChanged="SearchTextBox_TextChanged"/>
-        </StackPanel>
+	Title="Warehouse Inventory Tracker" Height="650" Width="950"
+	WindowStartupLocation="CenterScreen">
 
-        <!-- Product Management -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
-            <Button x:Name="AddProductButton" Content="Add Product" Margin="5,0" Click="AddProductButton_Click"/>
-            <Button x:Name="ReceiveShipmentButton" Content="Receive Shipment" Margin="5,0" Click="ReceiveShipmentButton_Click"/>
-            <Button x:Name="FulfillOrderButton" Content="Fulfill Order" Margin="5,0" Click="FulfillOrderButton_Click"/>
-        </StackPanel>
+	<Grid Margin="16">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
 
-        <!-- Product List -->
-        <DataGrid x:Name="ProductDataGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="100"/>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="200"/>
-                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="100"/>
-                <DataGridTextColumn Header="Reorder Threshold" Binding="{Binding ReorderThreshold}" Width="150"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+		<!-- Header Section: Warehouse Selection and Search -->
+		<Border Grid.Row="0" Background="{DynamicResource MaterialDesignCardBackground}"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="16"
+                Margin="0,0,0,16">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
 
-        <!-- Alert Messages -->
-        <TextBox x:Name="AlertTextBox" Grid.Row="3" Height="80" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
-    </Grid>
+				<!-- Warehouse Selection -->
+				<StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+					<materialDesign:PackIcon Kind="Warehouse" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{Binding ElementName=WarehouseComboBox, Path=BorderBrush}"/>
+					<ComboBox x:Name="WarehouseComboBox" Width="250"
+                              materialDesign:HintAssist.Hint="Select Warehouse"
+                              SelectionChanged="WarehouseComboBox_SelectionChanged"/>
+				</StackPanel>
+
+				<!-- Add Warehouse Button -->
+				<Button Grid.Column="1" x:Name="AddWarehouseButton"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        HorizontalAlignment="Left"
+                        Margin="16,0,0,0"
+                        Click="AddWarehouseButton_Click">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="Plus" Margin="0,0,8,0"/>
+						<TextBlock Text="Add Warehouse"/>
+					</StackPanel>
+				</Button>
+
+				<!-- Search -->
+				<StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+					<TextBox x:Name="SearchTextBox" Width="250"
+                             materialDesign:HintAssist.Hint="Search Products"
+                             materialDesign:TextFieldAssist.LeadingIcon="Magnify"
+                             TextChanged="SearchTextBox_TextChanged"/>
+				</StackPanel>
+			</Grid>
+		</Border>
+
+		<!-- Action Buttons Section -->
+		<Border Grid.Row="1" Background="{DynamicResource MaterialDesignCardBackground}"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="16"
+                Margin="0,0,0,16">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button x:Name="AddProductButton"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        Margin="8,0"
+                        Click="AddProductButton_Click">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="PackageVariantClosed" Margin="0,0,8,0"/>
+						<TextBlock Text="Add Product"/>
+					</StackPanel>
+				</Button>
+				<Button x:Name="ReceiveShipmentButton"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        Margin="8,0"
+                        Click="ReceiveShipmentButton_Click">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="TruckDelivery" Margin="0,0,8,0"/>
+						<TextBlock Text="Receive Shipment"/>
+					</StackPanel>
+				</Button>
+				<Button x:Name="FulfillOrderButton"
+                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                        Margin="8,0"
+                        Click="FulfillOrderButton_Click">
+					<StackPanel Orientation="Horizontal">
+						<materialDesign:PackIcon Kind="CartArrowDown" Margin="0,0,8,0"/>
+						<TextBlock Text="Fulfill Order"/>
+					</StackPanel>
+				</Button>
+			</StackPanel>
+		</Border>
+
+		<!-- Product List Section -->
+		<Border Grid.Row="2" Background="{DynamicResource MaterialDesignCardBackground}"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="8"
+                Margin="0,0,0,16">
+			<DataGrid x:Name="ProductDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      GridLinesVisibility="Horizontal"
+                      HorizontalGridLinesBrush="{DynamicResource MaterialDesignDivider}"
+                      HeadersVisibility="Column"
+                      Style="{StaticResource MaterialDesignDataGrid}">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="120"/>
+					<DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+					<DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="120"/>
+					<DataGridTextColumn Header="Threshold" Binding="{Binding ReorderThreshold}" Width="120"/>
+					<DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+				</DataGrid.Columns>
+			</DataGrid>
+		</Border>
+
+		<!-- Alert Messages Section -->
+		<Border Grid.Row="3" Background="{DynamicResource MaterialDesignCardBackground}"
+                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="8">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<TextBlock Grid.Row="0" Text="System Alerts" Style="{DynamicResource MaterialDesignHeadline6TextBlock}" Margin="8,8,8,4"/>
+				<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+					<TextBox x:Name="AlertTextBox"
+                             IsReadOnly="True"
+                             TextWrapping="Wrap"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Foreground="{DynamicResource MaterialDesignBody}"
+                             FontFamily="Consolas"
+                             VerticalAlignment="Top"
+                             MinHeight="80"/>
+				</ScrollViewer>
+			</Grid>
+		</Border>
+	</Grid>
 </Window>
