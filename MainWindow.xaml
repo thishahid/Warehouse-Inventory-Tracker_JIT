@@ -83,6 +83,7 @@
 				<Button x:Name="AddProductButton"
                         Style="{StaticResource MaterialDesignRaisedButton}"
                         Margin="8,0"
+                        Foreground="FloralWhite"
                         Click="AddProductButton_Click">
 					<StackPanel Orientation="Horizontal">
 						<materialDesign:PackIcon Kind="PackageVariantClosed" Margin="0,0,8,0"/>
@@ -107,7 +108,20 @@
 						<TextBlock Text="Fulfill Order"/>
 					</StackPanel>
 				</Button>
-			</StackPanel>
+                <Button x:Name="DeleteProductButton"
+						Style="{StaticResource MaterialDesignOutlinedButton}"
+						Margin="8,0"
+						Background="#D32F2F"
+						Foreground="DarkRed"
+						BorderBrush="#D32F2F"
+						Click="DeleteProductButton_Click"
+						IsEnabled="{Binding SelectedItem, ElementName=ProductDataGrid, Converter={StaticResource NullToBooleanConverter}}">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Delete" Margin="0,0,8,0"/>
+                        <TextBlock Text="Delete Product"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
 		</Border>
 
 		<!-- Product List Section -->
