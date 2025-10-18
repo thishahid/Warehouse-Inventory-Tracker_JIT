@@ -1,0 +1,61 @@
+﻿<Window x:Class="WarehouseInventoryTracker.DeleteWarehouseDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Confirm Warehouse Deletion" 
+        Height="320" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Style="{StaticResource MaterialDesignWindow}">
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Warning Icon and Title -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,16">
+            <materialDesign:PackIcon Kind="Warning" Foreground="#D32F2F" VerticalAlignment="Center" Height="30" Width="30" Margin="0,0,12,0"/>
+            <TextBlock Text="Delete Warehouse?" Style="{DynamicResource MaterialDesignHeadline5TextBlock}" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Warning Message -->
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Foreground="{DynamicResource MaterialDesignBody}">
+            This action <Bold>cannot</Bold> be undone. This will permanently delete the warehouse and all its associated products.
+            <LineBreak/>
+            <LineBreak/>
+            Please type <Bold><Run x:Name="WarehouseNameDisplay"/></Bold> to confirm.
+        </TextBlock>
+
+        <!-- Confirmation TextBox -->
+        <TextBox x:Name="ConfirmationTextBox"
+                 Grid.Row="2"
+                 materialDesign:HintAssist.Hint="Type warehouse name to confirm"
+                 Margin="0,16,0,16"
+                 TextChanged="ConfirmationTextBox_TextChanged"/>
+
+        <!-- Action Buttons -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="CancelButton"
+                    Content="Cancel"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Margin="0,0,8,0"
+                    IsCancel="True"
+                    Click="CancelButton_Click"/>
+            <Button x:Name="DeleteButton"
+                    Content="Delete Warehouse"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    Background="#D32F2F"
+                    Foreground="White"
+                    BorderBrush="#D32F2F"
+                    IsEnabled="False"
+                    Click="DeleteButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

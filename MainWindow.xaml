@@ -28,51 +28,66 @@
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 
-		<!-- Header Section: Warehouse Selection and Search -->
-		<Border Grid.Row="0" Background="{DynamicResource MaterialDesignCardBackground}"
-                BorderBrush="{DynamicResource MaterialDesignDivider}"
-                BorderThickness="1"
-                CornerRadius="4"
-                Padding="16"
-                Margin="0,0,0,16">
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="Auto"/>
-				</Grid.ColumnDefinitions>
+        <!-- Header Section: Warehouse Selection and Search -->
+        <Border Grid.Row="0" Background="{DynamicResource MaterialDesignCardBackground}" 
+        BorderBrush="{DynamicResource MaterialDesignDivider}" 
+        BorderThickness="1" 
+        CornerRadius="4" 
+        Padding="16" 
+        Margin="0,0,0,16">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-				<!-- Warehouse Selection -->
-				<StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-					<materialDesign:PackIcon Kind="Warehouse" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{Binding ElementName=WarehouseComboBox, Path=BorderBrush}"/>
-					<ComboBox x:Name="WarehouseComboBox" Width="250"
-                              materialDesign:HintAssist.Hint="Select Warehouse"
-                              SelectionChanged="WarehouseComboBox_SelectionChanged"/>
-				</StackPanel>
+                <!-- Warehouse Selection -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Warehouse" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{Binding ElementName=WarehouseComboBox, Path=BorderBrush}"/>
+                    <ComboBox x:Name="WarehouseComboBox" Width="250" 
+                      materialDesign:HintAssist.Hint="Select Warehouse"
+                      SelectionChanged="WarehouseComboBox_SelectionChanged"/>
+                </StackPanel>
 
-				<!-- Add Warehouse Button -->
-				<Button Grid.Column="1" x:Name="AddWarehouseButton"
-                        Style="{StaticResource MaterialDesignOutlinedButton}"
-                        HorizontalAlignment="Left"
-                        Margin="16,0,0,0"
-                        Click="AddWarehouseButton_Click">
-					<StackPanel Orientation="Horizontal">
-						<materialDesign:PackIcon Kind="Plus" Margin="0,0,8,0"/>
-						<TextBlock Text="Add Warehouse"/>
-					</StackPanel>
-				</Button>
+                <!-- Add/Delete Warehouse Buttons -->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="16,0,0,0">
+                    <Button x:Name="AddWarehouseButton" 
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Margin="0,0,8,0"
+                    Click="AddWarehouseButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Plus" Margin="0,0,8,0"/>
+                            <TextBlock Text="Add Warehouse"/>
+                        </StackPanel>
+                    </Button>
 
-				<!-- Search -->
-				<StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
-					<TextBox x:Name="SearchTextBox" Width="250"
-                             materialDesign:HintAssist.Hint="Search Products"
-                             materialDesign:TextFieldAssist.LeadingIcon="Magnify"
-                             TextChanged="SearchTextBox_TextChanged"/>
-				</StackPanel>
-			</Grid>
-		</Border>
+                    <!-- NEW DELETE WAREHOUSE BUTTON -->
+                    <Button x:Name="DeleteWarehouseButton"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Background="#D32F2F"
+                    Foreground="DarkRed"
+                    BorderBrush="#D32F2F"
+                    Click="DeleteWarehouseButton_Click"
+                    IsEnabled="{Binding SelectedItem, ElementName=WarehouseComboBox, Converter={StaticResource NullToBooleanConverter}}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Delete" Margin="0,0,8,0"/>
+                            <TextBlock Text="Delete Warehouse"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
 
-		<!-- Action Buttons Section -->
+                <!-- Search -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <TextBox x:Name="SearchTextBox" Width="250" 
+                     materialDesign:HintAssist.Hint="Search Products"
+                     materialDesign:TextFieldAssist.LeadingIcon="Magnify"
+                     TextChanged="SearchTextBox_TextChanged"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Action Buttons Section -->
 		<Border Grid.Row="1" Background="{DynamicResource MaterialDesignCardBackground}"
                 BorderBrush="{DynamicResource MaterialDesignDivider}"
                 BorderThickness="1"

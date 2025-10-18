@@ -247,6 +247,53 @@ namespace WarehouseInventoryTracker
             }
         }
 
+        private async void DeleteWarehouseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (WarehouseComboBox.SelectedItem is WarehouseViewModel selectedWarehouseViewModel)
+            {
+                var warehouse = selectedWarehouseViewModel.Warehouse;
+
+                // Show the custom confirmation dialog
+                var dialog = new DeleteWarehouseDialog(warehouse.Name);
+                if (dialog.ShowDialog() == true)
+                {
+                    // Check if the user confirmed the deletion in the dialog
+                    if (dialog.IsConfirmed)
+                    {
+                        try
+                        {
+                            await _warehouseManager.RemoveWarehouseAsync(warehouse.Id);
+
+                            // Remove the warehouse from the ComboBox
+                            WarehouseComboBox.Items.Remove(selectedWarehouseViewModel);
+
+                            // Check if there are any warehouses left
+                            if (WarehouseComboBox.Items.Count > 0)
+                            {
+                                // Select the first available warehouse
+                                WarehouseComboBox.SelectedIndex = 0;
+                            }
+                            else
+                            {
+                                // No warehouses left, clear the UI
+                                _currentWarehouse = null;
+                                ProductDataGrid.ItemsSource = null;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error deleting warehouse: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // This case should not happen due to the IsEnabled binding
+                MessageBox.Show("Please select a warehouse to delete.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
         private void OnStockAlert(object sender, StockAlertEventArgs e)
         {
             Dispatcher.Invoke(() =>

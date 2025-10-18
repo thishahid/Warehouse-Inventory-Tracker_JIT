@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\App.xaml
-4-2142947899
+5-1869400910
 22-339572211
-14-242686931
+15624142542
 201-104084072
-MainWindow.xaml;Views\AddProductDialog.xaml;Views\AddWarehouseDialog.xaml;Views\QuantityDialog.xaml;
+MainWindow.xaml;Views\AddProductDialog.xaml;Views\AddWarehouseDialog.xaml;Views\DeleteWarehouseDialog.xaml;Views\QuantityDialog.xaml;
 
-False
+True
 

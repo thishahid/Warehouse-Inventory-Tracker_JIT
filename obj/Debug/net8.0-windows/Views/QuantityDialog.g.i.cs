@@ -77,7 +77,7 @@ namespace WarehouseInventoryTracker {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WareHouse-Inventory;V1.0.0.0;component/views/quantitydialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WareHouse-Inventory;component/views/quantitydialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\QuantityDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -8,6 +8,9 @@
     <Compile Update="Views\AddWarehouseDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\DeleteWarehouseDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\QuantityDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

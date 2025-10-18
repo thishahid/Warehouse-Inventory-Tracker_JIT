@@ -101,6 +101,23 @@ namespace WarehouseInventoryTracker
             });
         }
 
+        public async Task RemoveWarehouseAsync(string warehouseId)
+        {
+            await Task.Run(() =>
+            {
+                if (string.IsNullOrWhiteSpace(warehouseId))
+                    throw new ArgumentException("Warehouse ID cannot be empty.", nameof(warehouseId));
+
+                if (!_warehouses.Remove(warehouseId))
+                {
+                    // If Remove returns false, the warehouse ID was not found.
+                    throw new KeyNotFoundException($"Warehouse with ID {warehouseId} not found.");
+                }
+
+                SaveData(); // Persist the change
+            });
+        }
+
         private void LoadData()
         {
             if (!File.Exists(_dataFilePath))

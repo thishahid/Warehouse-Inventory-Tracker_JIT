@@ -33,3 +33,5 @@ C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\WareHouse-Inventory.genruntimeconfig.cache
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\ref\WareHouse-Inventory.dll
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\Views\DeleteWarehouseDialog.baml
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\Views\DeleteWarehouseDialog.g.cs
