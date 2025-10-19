@@ -35,3 +35,11 @@ C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\Views\DeleteWarehouseDialog.baml
 C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\obj\Debug\net8.0-windows\Views\DeleteWarehouseDialog.g.cs
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\RBush.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\Asus\OneDrive\Desktop\Minor\Visual Studio\WareHouse-Inventory\bin\Debug\net8.0-windows\System.IO.Packaging.dll

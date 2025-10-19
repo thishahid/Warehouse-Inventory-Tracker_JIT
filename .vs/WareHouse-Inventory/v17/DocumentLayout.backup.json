@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\views\\addproductdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:views\\addproductdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\views\\deletewarehousedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:views\\deletewarehousedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\views\\deletewarehousedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:views\\deletewarehousedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\views\\addproductdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:views\\addproductdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\views\\deletewarehousedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|solutionrelative:views\\deletewarehousedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{136DD293-D505-4772-BF17-6ABA1CF860F4}|WareHouse-Inventory.csproj|c:\\users\\asus\\onedrive\\desktop\\minor\\visual studio\\warehouse-inventory\\services\\warehousemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,24 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DeleteWarehouseDialog.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\DeleteWarehouseDialog.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\DeleteWarehouseDialog.xaml.cs",
-              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\DeleteWarehouseDialog.xaml.cs",
-              "RelativeToolTip": "Views\\DeleteWarehouseDialog.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T19:29:54.076Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -127,7 +114,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "MainWindow.xaml.cs*",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAEwEwBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T07:50:52.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "DeleteWarehouseDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\DeleteWarehouseDialog.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\DeleteWarehouseDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\DeleteWarehouseDialog.xaml.cs",
+              "RelativeToolTip": "Views\\DeleteWarehouseDialog.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA3wBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T19:29:54.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DeleteWarehouseDialog.xaml",
               "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\DeleteWarehouseDialog.xaml",
               "RelativeDocumentMoniker": "Views\\DeleteWarehouseDialog.xaml",
@@ -139,28 +152,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AddProductDialog.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\AddProductDialog.xaml.cs",
               "RelativeDocumentMoniker": "Views\\AddProductDialog.xaml.cs",
               "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\AddProductDialog.xaml.cs",
               "RelativeToolTip": "Views\\AddProductDialog.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAcAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:09:42.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAO8AAAAAAAAAAAAMwPsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:50:52.303Z",
               "EditorCaption": ""
             },
             {
@@ -173,7 +173,8 @@
               "RelativeToolTip": "Services\\Warehouse.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAcwFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:59:41.454Z"
+              "WhenOpened": "2025-10-16T07:59:41.454Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -184,7 +185,8 @@
               "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\AddWarehouseDialog.xaml",
               "RelativeToolTip": "Views\\AddWarehouseDialog.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T08:07:02.6Z"
+              "WhenOpened": "2025-10-16T08:07:02.6Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -194,7 +196,7 @@
               "RelativeDocumentMoniker": "Services\\WarehouseManager.cs",
               "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Services\\WarehouseManager.cs",
               "RelativeToolTip": "Services\\WarehouseManager.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAIBJwHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-16T08:02:22.53Z",
               "EditorCaption": ""
@@ -220,7 +222,8 @@
               "ToolTip": "C:\\Users\\Asus\\OneDrive\\Desktop\\Minor\\Visual Studio\\WareHouse-Inventory\\Views\\AddProductDialog.xaml",
               "RelativeToolTip": "Views\\AddProductDialog.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-16T08:08:43.858Z"
+              "WhenOpened": "2025-10-16T08:08:43.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -232,7 +235,8 @@
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:14:00.219Z"
+              "WhenOpened": "2025-10-16T08:14:00.219Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -244,7 +248,8 @@
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T19:12:54.023Z"
+              "WhenOpened": "2025-10-17T19:12:54.023Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -256,7 +261,8 @@
               "RelativeToolTip": "Views\\QuantityDialog.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:12:08.106Z"
+              "WhenOpened": "2025-10-16T08:12:08.106Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -268,7 +274,8 @@
               "RelativeToolTip": "Views\\AddWarehouseDialog.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:07:48.729Z"
+              "WhenOpened": "2025-10-16T08:07:48.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -280,7 +287,8 @@
               "RelativeToolTip": "Services\\AlertService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:01:22.304Z"
+              "WhenOpened": "2025-10-16T08:01:22.304Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -292,7 +300,8 @@
               "RelativeToolTip": "Models\\IStockObserver.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:58:57.308Z"
+              "WhenOpened": "2025-10-16T07:58:57.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -304,7 +313,8 @@
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAswCgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T07:57:24.062Z"
+              "WhenOpened": "2025-10-16T07:57:24.062Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -45,7 +45,7 @@
                 <!-- Warehouse Selection -->
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
                     <materialDesign:PackIcon Kind="Warehouse" VerticalAlignment="Center" Margin="0,0,8,0" Foreground="{Binding ElementName=WarehouseComboBox, Path=BorderBrush}"/>
-                    <ComboBox x:Name="WarehouseComboBox" Width="250" 
+                    <ComboBox x:Name="WarehouseComboBox" Width="150" 
                       materialDesign:HintAssist.Hint="Select Warehouse"
                       SelectionChanged="WarehouseComboBox_SelectionChanged"/>
                 </StackPanel>
@@ -79,10 +79,22 @@
 
                 <!-- Search -->
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
-                    <TextBox x:Name="SearchTextBox" Width="250" 
+                    <TextBox x:Name="SearchTextBox" Width="150" 
                      materialDesign:HintAssist.Hint="Search Products"
                      materialDesign:TextFieldAssist.LeadingIcon="Magnify"
                      TextChanged="SearchTextBox_TextChanged"/>
+
+                    <!-- NEW EXPORT BUTTON -->
+                    <Button x:Name="ExportToExcelButton"
+                            Style="{StaticResource MaterialDesignOutlinedButton}"
+                            Margin="16,0,0,0"
+                            Click="ExportToExcelButton_Click"
+                            ToolTip="Export currently displayed products to Excel">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="FileExport" Margin="0,0,8,0"/>
+                            <TextBlock Text="Export"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
             </Grid>
         </Border>

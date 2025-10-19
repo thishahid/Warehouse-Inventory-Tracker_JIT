@@ -87,7 +87,7 @@ namespace WarehouseInventoryTracker {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WareHouse-Inventory;V1.0.0.0;component/views/deletewarehousedialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WareHouse-Inventory;component/views/deletewarehousedialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\DeleteWarehouseDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

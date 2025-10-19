@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data; // Added for CollectionViewSource
+using System.Windows.Data;
 
 namespace WarehouseInventoryTracker
 {
@@ -294,6 +295,71 @@ namespace WarehouseInventoryTracker
             }
         }
 
+        private async void ExportToExcelButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Ensure there is data to export
+            if (_productsView == null || !_productsView.Cast<object>().Any())
+            {
+                MessageBox.Show("There is no data to export.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                return;
+            }
+
+            // ✅ Capture headers on the UI thread BEFORE Task.Run
+            var headers = ProductDataGrid.Columns
+                .Select(col => col.Header as string ?? $"Column {col.DisplayIndex + 1}")
+                .ToList();
+
+            // Configure the Save File Dialog
+            var saveFileDialog = new Microsoft.Win32.SaveFileDialog
+            {
+                Filter = "Excel Workbook (*.xlsx)|*.xlsx",
+                FileName = $"WarehouseInventory_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx"
+            };
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    // Run export on background thread — but use pre-captured headers
+                    await Task.Run(() =>
+                    {
+                        using (var workbook = new XLWorkbook())
+                        {
+                            var worksheet = workbook.Worksheets.Add("Inventory");
+
+                            // --- Add Headers (from captured list) ---
+                            for (int i = 0; i < headers.Count; i++)
+                            {
+                                worksheet.Cell(1, i + 1).Value = headers[i];
+                            }
+
+                            worksheet.Row(1).Style.Font.Bold = true;
+
+                            // --- Add Data Rows ---
+                            int row = 2;
+                            foreach (ProductViewModel product in _productsView)
+                            {
+                                worksheet.Cell(row, 1).Value = product.Id;
+                                worksheet.Cell(row, 2).Value = product.Name;
+                                worksheet.Cell(row, 3).Value = product.Quantity;
+                                worksheet.Cell(row, 4).Value = product.ReorderThreshold;
+                                worksheet.Cell(row, 5).Value = product.Status;
+                                row++;
+                            }
+
+                            worksheet.Columns().AdjustToContents();
+                            workbook.SaveAs(saveFileDialog.FileName);
+                        }
+                    });
+
+                    MessageBox.Show($"Export successful!\nFile saved to:\n{saveFileDialog.FileName}", "Export Complete", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred during export: {ex.Message}", "Export Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
         private void OnStockAlert(object sender, StockAlertEventArgs e)
         {
             Dispatcher.Invoke(() =>
